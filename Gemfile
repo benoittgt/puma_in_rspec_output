@@ -37,7 +37,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-core', git: 'https://github.com/rspec/rspec-core.git'
+  gem 'rspec-mocks', git: 'https://github.com/rspec/rspec-mocks.git'
+  gem 'rspec-expectations', git: 'https://github.com/rspec/rspec-expectations.git'
+  gem 'rspec-support', git: 'https://github.com/rspec/rspec-support.git'
+
+  gem 'rspec-rails', git: 'https://github.com/ta1kt0me/rspec-rails.git', branch: 'silence_puma'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
